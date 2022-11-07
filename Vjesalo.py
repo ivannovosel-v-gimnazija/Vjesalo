@@ -89,6 +89,7 @@ while(pocetak == "DA"):
         nadimak = input("Unesi nadimak " + str(i+1) + ". igraca > ")
         igraci.append(nadimak)
         bodovi[nadimak] = 0
+    # ovdje slučajno odabirete igrača koji bira (valjda, nije dokumentirano što ovo zapravo je) ispod imate liniju gdje tog igrača izbacujete iz liste!
     bira=random.choice(igraci)
     print("Riječ u ovoj igri bira "+str(bira)+".")     
     nacin = ""
@@ -115,6 +116,7 @@ while(pocetak == "DA"):
         index = izabrana_rijec.index("ž")
         izabrana_rijec[index-1] = "Dž" 
         izabrana_rijec.pop(index)
+    # ovog igrača više nema u listi igrača, tako da njemu se nikad više ne nudi igranje to mi nije jasno zašto
     maknuti=igraci.pop(igraci.index(bira))
     skrivena_rijec = "" 
     krivih = 0
